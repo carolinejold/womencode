@@ -19,8 +19,21 @@ const TedTalks = () => {
   return (
     <div>
       {talks.map((el) => (
-        <p key={el.id}>{el.snippet.title}</p>
+        <a
+          href={`https://www.youtube.com/watch?v=${el.snippet.resourceId.videoId}`}
+        >
+          <div>
+            <p key={el.id}>{el.snippet.title}</p>
+            <img
+              src={el.snippet.thumbnails.default.url}
+              alt="ted talk"
+              width={el.snippet.thumbnails.default.width}
+              height={el.snippet.thumbnails.default.height}
+            ></img>
+          </div>
+        </a>
       ))}
+      )}
     </div>
   );
 };
