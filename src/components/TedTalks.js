@@ -6,8 +6,10 @@ const TedTalks = () => {
 
   useEffect(() => {
     async function fetchData() {
-      let response = await axios(`https://swapi.dev/api/people/`);
-      let result = await response.data.results;
+      let response = await axios(
+        `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet%2CcontentDetails%2Cstatus&maxResults=1000&playlistId=UUK8sQmJBp8GCxrOtXWBpyEA&key=AIzaSyBWU0PnsPGSGrQ6T5K2uxv5Of4h3Hw5eFc`
+      );
+      let result = await response.data.items;
       setTalks(result);
     }
     fetchData();
@@ -17,7 +19,7 @@ const TedTalks = () => {
   return (
     <div>
       {talks.map((el) => (
-        <p key={el.created}>{el.name}</p>
+        <p key={el.id}>{el.snippet.title}</p>
       ))}
     </div>
   );
