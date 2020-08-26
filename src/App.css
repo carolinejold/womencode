@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+body {
+  margin: 1em;
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-align: center;
+}
+
+h1 {
+  font-family: "Rubik", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-size: 3em;
+}
+
+h2 {
+  font-family: "Rubik", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+h3 {
+  font-family: "Rubik", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+h4 {
+  font-family: "Rubik", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+}
+
+h5 {
+  font-family: "Rubik", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.card {
+  border: solid 1px grey;
+  margin: auto;
+  width: 300px;
+  height: 320px;
+  margin-bottom: 1em;
+}
+
+@media only screen and (min-width: 650px) {
+  .card-container {
+    display: grid;
+    justify-content: center;
+    grid-gap: 1em;
+    grid-template-columns: auto auto;
+  }
+}
+
+@media only screen and (min-width: 950px) {
+  .card-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+  }
+}

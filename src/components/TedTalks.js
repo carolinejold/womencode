@@ -7,7 +7,7 @@ const TedTalks = () => {
   useEffect(() => {
     async function fetchData() {
       let response = await axios(
-        `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet%2CcontentDetails%2Cstatus&maxResults=1000&playlistId=UUK8sQmJBp8GCxrOtXWBpyEA&key=AIzaSyBWU0PnsPGSGrQ6T5K2uxv5Of4h3Hw5eFc`
+        `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet%2CcontentDetails%2Cstatus&maxResults=2000&playlistId=UUAuUUnT6oDeKwE6v1NGQxug&key=AIzaSyBWU0PnsPGSGrQ6T5K2uxv5Of4h3Hw5eFc`
       );
       let result = await response.data.items;
       setTalks(result);
@@ -15,25 +15,27 @@ const TedTalks = () => {
     fetchData();
   }, []);
 
-  console.log(talks);
   return (
-    <div>
+    <div className="card-container">
       {talks.map((el) => (
-        <a
-          href={`https://www.youtube.com/watch?v=${el.snippet.resourceId.videoId}`}
-        >
-          <div>
-            <p key={el.id}>{el.snippet.title}</p>
-            <img
-              src={el.snippet.thumbnails.default.url}
-              alt="ted talk"
-              width={el.snippet.thumbnails.default.width}
-              height={el.snippet.thumbnails.default.height}
-            ></img>
-          </div>
-        </a>
+        <div key={el.id} className="card">
+          <a
+            href={`https://www.youtube.com/watch?v=${el.snippet.resourceId.videoId}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div>
+              <img
+                src={el.snippet.thumbnails.high.url}
+                alt="ted talk"
+                width="300"
+                height="220"
+              ></img>
+              <h4>{el.snippet.title}</h4>
+            </div>
+          </a>
+        </div>
       ))}
-      )}
     </div>
   );
 };
