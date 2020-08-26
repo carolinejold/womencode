@@ -10,8 +10,10 @@ Done:
 * Inspiration - displays array of videos from Ted Talks API.
 
 TODO:
+* Finish adjusting API to show specific results
 * Home page
 * About page
 * Resources
 * Blog
+* Contact form
 * React router - separate components
