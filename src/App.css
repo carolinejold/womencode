@@ -1,15 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 body {
-  margin: 1em;
   font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-align: center;
+  /* background-image: url("https://cdn.pixabay.com/photo/2017/05/13/17/41/textile-2310247_1280.png"); */
+  background-image: url("https://images.pexels.com/photos/3541916/pexels-photo-3541916.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
 }
 
 h1 {
   font-family: "Rubik", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 300;
-  font-size: 3em;
+  font-size: 1.5em;
+  text-align: left;
+  padding: 0em 0em 0em 1em;
+  color: whitesmoke;
 }
 
 h2 {
@@ -31,15 +38,42 @@ h5 {
 
 a {
   text-decoration: none;
-  color: black;
+  color: whitesmoke;
+}
+
+p {
+  color: whitesmoke;
+}
+
+.App-header {
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 0.01em;
+  margin-bottom: 1em;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.card-container {
+  background-color: rgba(255, 255, 255, 0.7);
+  padding-top: 2em;
+  /* margin: auto; */
+  margin-top: -1em;
+  /* max-height: 400px;
+  overflow-y: scroll; */
 }
 
 .card {
-  border: solid 1px grey;
   margin: auto;
   width: 300px;
   height: 320px;
   margin-bottom: 1em;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: whitesmoke;
+}
+
+img {
+  filter: grayscale(100%);
 }
 
 @media only screen and (min-width: 650px) {
@@ -51,9 +85,15 @@ a {
   }
 }
 
+@media only screen and (min-width: 750px) {
+  .card-container {
+    grid-gap: 2em;
+  }
+}
+
 @media only screen and (min-width: 950px) {
   .card-container {
-    display: grid;
+    grid-gap: 1em;
     grid-template-columns: auto auto auto;
   }
 }
