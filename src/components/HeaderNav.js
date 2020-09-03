@@ -9,7 +9,7 @@ const HeaderNav = () => {
         <div className="app-header">
           <header className="app-header-title">
             <Link to="/">
-              <h1>WomenCode.se</h1>
+              <h1 className="nav-title">WomenCode.se</h1>
             </Link>
           </header>
           <nav className="app-header-nav">

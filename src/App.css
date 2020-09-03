@@ -14,11 +14,18 @@ h1 {
   font-family: "Rubik", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 300;
   font-size: 1.5em;
-  padding: 0em 0em 0em 1em;
+  padding: 0em 0em 0em 0em;
   color: whitesmoke;
 }
 
-h2,
+h2 {
+  font-family: "Rubik", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-size: 1.2em;
+  padding: 0em 0em 0em 0em;
+  color: whitesmoke;
+}
+
 h3,
 h5 {
   font-family: "Rubik", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -56,6 +63,33 @@ p {
   font-size: 1.2em;
   padding: 1em 1em 1em 1em;
   color: whitesmoke;
+}
+
+.nav-title {
+  padding-left: 1em;
+}
+
+.home-container {
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 2em 0em 2em 0em;
+  /* margin: auto; */
+  margin-top: -1em;
+
+  /* max-height: 400px;
+  overflow-y: scroll; */
+}
+
+.home-title {
+  color: black;
+  font-size: 4em;
+}
+
+.home-description {
+  font-size: 2em;
+  color: black;
+  margin: auto;
+  max-width: 600px;
+  padding-bottom: 2em;
 }
 
 .card-container {
