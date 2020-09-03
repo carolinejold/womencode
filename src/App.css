@@ -19,21 +19,13 @@ h1 {
   color: whitesmoke;
 }
 
-h2 {
-  font-family: "Rubik", "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-
-h3 {
+h2, h3, h5 {
   font-family: "Rubik", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 h4 {
   font-family: "Rubik", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 300;
-}
-
-h5 {
-  font-family: "Rubik", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 a {

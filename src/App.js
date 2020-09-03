@@ -2,7 +2,7 @@ import React from "react";
 import TedTalks from "./components/TedTalks";
 import "./App.css";
 
-function App() {
+const App = () => {
   return (
     <div className="App">
       <header className="App-header">
@@ -11,6 +11,6 @@ function App() {
       <TedTalks />
     </div>
   );
-}
+};
 
 export default App;
