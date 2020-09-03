@@ -14,12 +14,13 @@ h1 {
   font-family: "Rubik", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 300;
   font-size: 1.5em;
-  text-align: left;
   padding: 0em 0em 0em 1em;
   color: whitesmoke;
 }
 
-h2, h3, h5 {
+h2,
+h3,
+h5 {
   font-family: "Rubik", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
@@ -37,13 +38,24 @@ p {
   color: whitesmoke;
 }
 
-.App-header {
+.app-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   background-color: rgba(0, 0, 0, 0.9);
   padding: 0.01em;
   margin-bottom: 1em;
   position: sticky;
   top: 0;
   z-index: 100;
+}
+
+.app-header-nav {
+  font-family: "Rubik", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-size: 1.2em;
+  padding: 1em 1em 1em 1em;
+  color: whitesmoke;
 }
 
 .card-container {
