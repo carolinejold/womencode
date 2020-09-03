@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-const TedTalks = () => {
-  let [talks, setTalks] = useState([]);
+const Videos = () => {
+  let [videos, setVideos] = useState([]);
 
   useEffect(() => {
     async function fetchData() {
@@ -10,14 +10,14 @@ const TedTalks = () => {
         `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet%2CcontentDetails%2Cstatus&maxResults=2000&playlistId=UUAuUUnT6oDeKwE6v1NGQxug&key=AIzaSyBWU0PnsPGSGrQ6T5K2uxv5Of4h3Hw5eFc`
       );
       let result = await response.data.items;
-      setTalks(result);
+      setVideos(result);
     }
     fetchData();
   }, []);
 
   return (
     <div className="card-container">
-      {talks.map((el) => (
+      {videos.map((el) => (
         <div key={el.id} className="card">
           <a
             href={`https://www.youtube.com/watch?v=${el.snippet.resourceId.videoId}`}
@@ -40,4 +40,4 @@ const TedTalks = () => {
   );
 };
 
-export default TedTalks;
+export default Videos;
