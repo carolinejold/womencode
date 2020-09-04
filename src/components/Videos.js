@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Fade from "react-reveal/Fade";
 import axios from "axios";
 
 const Videos = () => {
@@ -16,27 +17,30 @@ const Videos = () => {
   }, []);
 
   return (
-    <div className="card-container">
-      {videos.map((el) => (
-        <div key={el.id} className="card">
-          <a
-            href={`https://www.youtube.com/watch?v=${el.snippet.resourceId.videoId}`}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <div>
-              <img
-                src={el.snippet.thumbnails.high.url}
-                alt="ted talk"
-                width="300"
-                height="220"
-              ></img>
-              <h4>{el.snippet.title}</h4>
-            </div>
-          </a>
-        </div>
-      ))}
-    </div>
+    <Fade>
+      <div className="videos-container">
+        {/* <h1 className="videos-title">Videos</h1> */}
+        {videos.map((el) => (
+          <div key={el.id} className="videos">
+            <a
+              href={`https://www.youtube.com/watch?v=${el.snippet.resourceId.videoId}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div>
+                <img
+                  src={el.snippet.thumbnails.high.url}
+                  alt="ted talk"
+                  width="300"
+                  height="220"
+                ></img>
+                <h4>{el.snippet.title}</h4>
+              </div>
+            </a>
+          </div>
+        ))}
+      </div>
+    </Fade>
   );
 };
 
